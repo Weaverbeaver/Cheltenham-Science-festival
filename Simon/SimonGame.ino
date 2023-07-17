@@ -237,7 +237,9 @@ void get_sequence() {
         aw.analogWrite(LedPin1, MaxBrightness);
         your_sequence[i] = 1;
         flag = 1;
-        delay(300);
+        while (digitalRead(D5) == LOW) {
+          delay(100);
+        }
         if (your_sequence[i] != sequence[i]) {
           wrong_sequence();
           return;
@@ -250,7 +252,9 @@ void get_sequence() {
         aw.analogWrite(LedPin2, MaxBrightness);
         your_sequence[i] = 2;
         flag = 1;
-        delay(300);
+        while (digitalRead(D6) == LOW) {
+          delay(100);
+        }
         if (your_sequence[i] != sequence[i]) {
           wrong_sequence();
           return;
@@ -263,7 +267,9 @@ void get_sequence() {
         aw.analogWrite(LedPin3, MaxBrightness);
         your_sequence[i] = 3;
         flag = 1;
-        delay(300);
+        while (digitalRead(D7) == LOW) {
+          delay(100);
+        }
         if (your_sequence[i] != sequence[i]) {
           wrong_sequence();
           return;
@@ -276,7 +282,9 @@ void get_sequence() {
         aw.analogWrite(LedPin4, MaxBrightness);
         your_sequence[i] = 4;
         flag = 1;
-        delay(300);
+        while (digitalRead(3) == LOW) {
+          delay(100);
+        }
         if (your_sequence[i] != sequence[i]) {
           wrong_sequence();
           return;
